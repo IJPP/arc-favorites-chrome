@@ -1,0 +1,92 @@
+:root {
+  color-scheme: light dark;
+  --ink: #10233f;
+  --muted: #708096;
+  --paper: #f3f7fb;
+  --blue: #3b7cff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  margin: 0;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(59, 124, 255, 0.12), transparent 30%),
+    var(--paper);
+  color: var(--ink);
+  font-family:
+    ui-rounded,
+    "SF Pro Rounded",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+main {
+  max-width: 420px;
+  padding: 32px;
+  text-align: center;
+}
+
+.glyph {
+  display: grid;
+  grid-template-columns: repeat(2, 10px);
+  gap: 5px;
+  width: max-content;
+  margin: 0 auto 20px;
+  padding: 13px;
+  border-radius: 16px;
+  background: var(--ink);
+  box-shadow: 0 16px 36px rgba(16, 35, 63, 0.18);
+}
+
+.glyph span {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: #d9e8ff;
+}
+
+.glyph span:first-child {
+  background: var(--blue);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(24px, 4vw, 38px);
+  letter-spacing: -0.04em;
+}
+
+#host {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e5effb;
+    --muted: #91a2b8;
+    --paper: #091c34;
+  }
+
+  .glyph {
+    background: #17375e;
+  }
+}

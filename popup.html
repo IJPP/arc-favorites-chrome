@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Favorites</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="masthead">
+        <div>
+          <p class="eyebrow">Native pinned tabs</p>
+          <h1>Favorites</h1>
+        </div>
+        <output class="count" id="favorite-count">0 / 12</output>
+      </header>
+
+      <section class="rail-panel" aria-labelledby="rail-label">
+        <div class="rail-label" id="rail-label">
+          <span>Tab rail</span>
+          <span class="legend"><i></i> warm <i></i> cold</span>
+        </div>
+        <div class="favorite-rail" id="favorite-rail"></div>
+      </section>
+
+      <section class="current-panel" id="current-panel">
+        <p class="eyebrow">Current tab</p>
+        <div id="current-content" aria-live="polite"></div>
+      </section>
+
+      <section class="library" aria-labelledby="library-title">
+        <div class="section-heading">
+          <h2 id="library-title">Saved homes</h2>
+          <button class="text-button" id="open-shortcuts" type="button">
+            Shortcuts
+          </button>
+        </div>
+        <div class="favorite-list" id="favorite-list"></div>
+      </section>
+
+      <footer>
+        <span class="key" id="close-shortcut">⌥W</span>
+        <span>closes a Favorite without removing it</span>
+      </footer>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

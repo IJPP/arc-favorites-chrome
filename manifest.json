@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Favorites for Chrome",
+  "version": "0.1.9",
+  "description": "Arc-style Favorites using Chrome's native pinned tabs.",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "contextMenus",
+    "favicon",
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "favorites-background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "32": "assets/icon32.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "action": {
+    "default_title": "Favorites",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "32": "assets/icon32.png"
+    }
+  },
+  "commands": {
+    "close-favorite": {
+      "suggested_key": {
+        "default": "Alt+W",
+        "mac": "Alt+W"
+      },
+      "description": "Close the active Favorite without removing it"
+    },
+    "toggle-favorite": {
+      "suggested_key": {
+        "default": "Alt+Shift+P",
+        "mac": "Alt+Shift+P"
+      },
+      "description": "Add or remove the active tab as a Favorite"
+    }
+  },
+  "incognito": "not_allowed"
+}
