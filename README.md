@@ -2,6 +2,8 @@
 
 An Arc-style Favorites prototype built on Chrome's native pinned tabs.
 
+[简体中文说明](README.zh-CN.md)
+
 ## The interaction
 
 - **Make Favorite** registers the current page's URL as its permanent Home and
